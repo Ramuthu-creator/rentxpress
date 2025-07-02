@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Account - RentX</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .register-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    .register-box input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .register-box button {
+      width: 95%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .register-box button:hover {
+      background-color: #007bff;
+    }
+
+    .register-box a {
+      text-decoration: none;
+      color: #007bff;
+      font-size: 14px;
+    }
+
+    .register-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-box">
+    <h2>Create Account</h2>
+    <form action="Create account.php" method="POST">
+  <input type="text" name="user_name" placeholder="Username" required><br><br>
+  <input type="email" name="email" placeholder="Email" required><br><br>
+  <input type="password" name="password" placeholder="Password" required><br><br>
+  <button type="submit">Register</button>
+</form>
+
+    <br>
+    <div class="text-center mt-6">
+        <a href="Login.html" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">
+             <span aria-hidden="true">&larr;</span> Back to Login
+        </a>
+    </div>
+  </div>
+
+</body>
+</html>

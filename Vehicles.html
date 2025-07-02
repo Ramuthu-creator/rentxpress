@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Vehicles - RentX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <div class="container mx-auto max-w-5xl my-10 px-4">
+    <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Vehicles - RentX</h2>
+      
+      <!-- Vehicle List -->
+      <div id="vehicle-list" class="space-y-6">
+        
+        <!-- Toyota Corolla -->
+        <div class="vehicle-card border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center transition-shadow duration-300 hover:shadow-lg space-y-4 md:space-y-0 md:space-x-6">
+          <img src="Toyota-Corolla.png" 
+               alt="Toyota Corolla" 
+               class="w-full md:w-56 h-auto rounded-lg object-cover">
+          <div class="flex-grow text-center md:text-left">
+            <h3 class="text-xl font-semibold text-gray-900">Toyota Corolla</h3>
+            <p class="text-gray-600">Type: Car</p>
+            <p class="text-green-600 font-medium mt-2">Availability: Available</p>
+          </div>
+          <div class="flex flex-col items-center md:items-end space-y-3 w-full md:w-auto md:min-w-[180px]">
+            <div class="text-sm text-gray-800 text-center md:text-right">
+                <p><span class="font-semibold">Daily:</span> <span data-rate="daily">9500</span> LKR</p>
+                <p><span class="font-semibold">Weekly:</span> <span data-rate="weekly">60000</span> LKR</p>
+                <p><span class="font-semibold">Monthly:</span> <span data-rate="monthly">210000</span> LKR</p>
+            </div>
+            <button class="select-btn w-full md:w-auto bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">Select</button>
+          </div>
+        </div>
+
+        <!-- Nissan NV350 -->
+        <div class="vehicle-card border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center transition-shadow duration-300 hover:shadow-lg space-y-4 md:space-y-0 md:space-x-6">
+          <img src="Nissan NV 350.png" 
+               alt="Nissan NV350" 
+               class="w-full md:w-56 h-auto rounded-lg object-cover">
+          <div class="flex-grow text-center md:text-left">
+            <h3 class="text-xl font-semibold text-gray-900">Nissan NV350</h3>
+            <p class="text-gray-600">Type: Van</p>
+            <p class="text-green-600 font-medium mt-2">Availability: Available</p>
+          </div>
+          <div class="flex flex-col items-center md:items-end space-y-3 w-full md:w-auto md:min-w-[180px]">
+            <div class="text-sm text-gray-800 text-center md:text-right">
+                <p><span class="font-semibold">Daily:</span> <span data-rate="daily">14000</span> LKR</p>
+                <p><span class="font-semibold">Weekly:</span> <span data-rate="weekly">85000</span> LKR</p>
+                <p><span class="font-semibold">Monthly:</span> <span data-rate="monthly">280000</span> LKR</p>
+            </div>
+            <button class="select-btn w-full md:w-auto bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">Select</button>
+          </div>
+        </div>
+
+        <!-- Toyota KDH -->
+        <div class="vehicle-card border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center transition-shadow duration-300 hover:shadow-lg space-y-4 md:space-y-0 md:space-x-6">
+          <img src="TOYOTA KDH.jpg" 
+               alt="Toyota KDH" 
+               class="w-full md:w-56 h-auto rounded-lg object-cover">
+          <div class="flex-grow text-center md:text-left">
+            <h3 class="text-xl font-semibold text-gray-900">Toyota KDH</h3>
+            <p class="text-gray-600">Type: Van</p>
+            <p class="text-green-600 font-medium mt-2">Availability: Available</p>
+          </div>
+          <div class="flex flex-col items-center md:items-end space-y-3 w-full md:w-auto md:min-w-[180px]">
+            <div class="text-sm text-gray-800 text-center md:text-right">
+                <p><span class="font-semibold">Daily:</span> <span data-rate="daily">15000</span> LKR</p>
+                <p><span class="font-semibold">Weekly:</span> <span data-rate="weekly">87000</span> LKR</p>
+                <p><span class="font-semibold">Monthly:</span> <span data-rate="monthly">300000</span> LKR</p>
+            </div>
+            <button class="select-btn w-full md:w-auto bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">Select</button>
+          </div>
+        </div>
+
+        <!-- Honda Civic -->
+        <div class="vehicle-card border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center transition-shadow duration-300 hover:shadow-lg space-y-4 md:space-y-0 md:space-x-6">
+          <img src="Honda Civic.png" 
+               alt="Honda Civic" 
+               class="w-full md:w-56 h-auto rounded-lg object-cover">
+          <div class="flex-grow text-center md:text-left">
+            <h3 class="text-xl font-semibold text-gray-900">Honda Civic</h3>
+            <p class="text-gray-600">Type: Car</p>
+            <p class="text-green-600 font-medium mt-2">Availability: Available</p>
+          </div>
+          <div class="flex flex-col items-center md:items-end space-y-3 w-full md:w-auto md:min-w-[180px]">
+            <div class="text-sm text-gray-800 text-center md:text-right">
+                <p><span class="font-semibold">Daily:</span> <span data-rate="daily">10000</span> LKR</p>
+                <p><span class="font-semibold">Weekly:</span> <span data-rate="weekly">65000</span> LKR</p>
+                <p><span class="font-semibold">Monthly:</span> <span data-rate="monthly">225000</span> LKR</p>
+            </div>
+            <button class="select-btn w-full md:w-auto bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">Select</button>
+          </div>
+        </div>
+
+        <!-- Suzuki Alto -->
+        <div class="vehicle-card border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center transition-shadow duration-300 hover:shadow-lg space-y-4 md:space-y-0 md:space-x-6">
+            <img src="Suzuki Alto.png" 
+                 alt="Suzuki Alto" 
+                 class="w-full md:w-56 h-auto rounded-lg object-cover">
+            <div class="flex-grow text-center md:text-left">
+                <h3 class="text-xl font-semibold text-gray-900">Suzuki Alto</h3>
+                <p class="text-gray-600">Type: Car</p>
+                <p class="text-green-600 font-medium mt-2">Availability: Available</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end space-y-3 w-full md:w-auto md:min-w-[180px]">
+                <div class="text-sm text-gray-800 text-center md:text-right">
+                    <p><span class="font-semibold">Daily:</span> <span data-rate="daily">4500</span> LKR</p>
+                    <p><span class="font-semibold">Weekly:</span> <span data-rate="weekly">28000</span> LKR</p>
+                    <p><span class="font-semibold">Monthly:</span> <span data-rate="monthly">90000</span> LKR</p>
+                </div>
+                <button class="select-btn w-full md:w-auto bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">Select</button>
+            </div>
+        </div>
+
+        <!-- Toyota Prius -->
+        <div class="vehicle-card border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center transition-shadow duration-300 hover:shadow-lg space-y-4 md:space-y-0 md:space-x-6">
+            <img src="Toyota Prius.png" 
+                 alt="Toyota Prius" 
+                 class="w-full md:w-56 h-auto rounded-lg object-cover">
+            <div class="flex-grow text-center md:text-left">
+                <h3 class="text-xl font-semibold text-gray-900">Toyota Prius</h3>
+                <p class="text-gray-600">Type: Car</p>
+                <p class="text-green-600 font-medium mt-2">Availability: Available</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end space-y-3 w-full md:w-auto md:min-w-[180px]">
+                <div class="text-sm text-gray-800 text-center md:text-right">
+                    <p><span class="font-semibold">Daily:</span> <span data-rate="daily">9800</span> LKR</p>
+                    <p><span class="font-semibold">Weekly:</span> <span data-rate="weekly">62000</span> LKR</p>
+                    <p><span class="font-semibold">Monthly:</span> <span data-rate="monthly">215000</span> LKR</p>
+                </div>
+                <button class="select-btn w-full md:w-auto bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">Select</button>
+            </div>
+        </div>
+
+        <!-- Perodua Bezza -->
+        <div class="vehicle-card border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center transition-shadow duration-300 hover:shadow-lg space-y-4 md:space-y-0 md:space-x-6">
+            <img src="Perodua Bezza.png" 
+                 alt="Perodua Bezza" 
+                 class="w-full md:w-56 h-auto rounded-lg object-cover">
+            <div class="flex-grow text-center md:text-left">
+                <h3 class="text-xl font-semibold text-gray-900">Perodua Bezza</h3>
+                <p class="text-gray-600">Type: Car</p>
+                <p class="text-green-600 font-medium mt-2">Availability: Available</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end space-y-3 w-full md:w-auto md:min-w-[180px]">
+                <div class="text-sm text-gray-800 text-center md:text-right">
+                    <p><span class="font-semibold">Daily:</span> <span data-rate="daily">7000</span> LKR</p>
+                    <p><span class="font-semibold">Weekly:</span> <span data-rate="weekly">45000</span> LKR</p>
+                    <p><span class="font-semibold">Monthly:</span> <span data-rate="monthly">150000</span> LKR</p>
+                </div>
+                <button class="select-btn w-full md:w-auto bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">Select</button>
+            </div>
+        </div>
+
+        <!-- Nissan Caravan -->
+        <div class="vehicle-card border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center transition-shadow duration-300 hover:shadow-lg space-y-4 md:space-y-0 md:space-x-6">
+            <img src="Nissan Caravan.png" 
+                 alt="Nissan Caravan" 
+                 class="w-full md:w-56 h-auto rounded-lg object-cover">
+            <div class="flex-grow text-center md:text-left">
+                <h3 class="text-xl font-semibold text-gray-900">Nissan Caravan</h3>
+                <p class="text-gray-600">Type: Van</p>
+                <p class="text-red-600 font-medium mt-2">Availability: Not Available</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end space-y-3 w-full md:w-auto md:min-w-[180px]">
+                <div class="text-sm text-gray-800 text-center md:text-right">
+                    <p><span class="font-semibold">Daily:</span> <span data-rate="daily">12000</span> LKR</p>
+                    <p><span class="font-semibold">Weekly:</span> <span data-rate="weekly">80000</span> LKR</p>
+                    <p><span class="font-semibold">Monthly:</span> <span data-rate="monthly">275000</span> LKR</p>
+                </div>
+                <button class="select-btn w-full md:w-auto bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">Select</button>
+            </div>
+        </div>
+
+        <!-- Tata Nano -->
+        <div class="vehicle-card border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center transition-shadow duration-300 hover:shadow-lg space-y-4 md:space-y-0 md:space-x-6">
+            <img src="Tata Nano.png" 
+                 alt="Tata Nano" 
+                 class="w-full md:w-56 h-auto rounded-lg object-cover">
+            <div class="flex-grow text-center md:text-left">
+                <h3 class="text-xl font-semibold text-gray-900">Tata Nano</h3>
+                <p class="text-gray-600">Type: Car</p>
+                <p class="text-red-600 font-medium mt-2">Availability: Not Available</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end space-y-3 w-full md:w-auto md:min-w-[180px]">
+                <div class="text-sm text-gray-800 text-center md:text-right">
+                    <p><span class="font-semibold">Daily:</span> <span data-rate="daily">3500</span> LKR</p>
+                    <p><span class="font-semibold">Weekly:</span> <span data-rate="weekly">20000</span> LKR</p>
+                    <p><span class="font-semibold">Monthly:</span> <span data-rate="monthly">80000</span> LKR</p>
+                </div>
+                <button class="select-btn w-full md:w-auto bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">Select</button>
+            </div>
+        </div>
+      </div>
+
+      <!-- Back Link -->
+      <div class="text-center mt-8">
+        <a href="Main Page.html" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">
+          <span aria-hidden="true">&larr;</span> Back to Main Page
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // --- Event listener for select buttons ---
+    document.addEventListener('DOMContentLoaded', () => {
+      const selectButtons = document.querySelectorAll('.select-btn');
+      
+      selectButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          // Find the parent vehicle card
+          const card = e.target.closest('.vehicle-card');
+          
+          // Extract vehicle information from the card
+          const name = card.querySelector('h3').textContent;
+          const image = card.querySelector('img').src;
+          const type = card.querySelector('p').textContent;
+          const dailyRate = card.querySelector('[data-rate="daily"]').textContent;
+          const weeklyRate = card.querySelector('[data-rate="weekly"]').textContent;
+          const monthlyRate = card.querySelector('[data-rate="monthly"]').textContent;
+
+          // Encode the information for the URL
+          const params = new URLSearchParams({
+            name,
+            image,
+            type,
+            dailyRate,
+            weeklyRate,
+            monthlyRate
+          });
+          
+          // Redirect to the booking page with the vehicle data
+          window.location.href = `booking.html?${params.toString()}`;
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Damage - RentX</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Use Inter as the default font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <!-- Main container for the form -->
+    <div class="w-full max-w-lg p-8 space-y-6 bg-white rounded-xl shadow-lg">
+        <!-- Header Section -->
+        <div class="text-center">
+            <h1 class="text-3xl font-bold text-gray-800">Report Vehicle Damage</h1>
+            <p class="text-gray-500 mt-2">Please provide the details of the damage below.</p>
+        </div>
+
+        <!-- Damage Report Form -->
+        <form id="damageForm" class="space-y-6" method="POST" action="damage.php">
+            <!-- User ID Input -->
+            <div>
+                <label for="userId" class="block text-sm font-medium text-gray-700">Your User ID</label>
+                <input type="text" id="userId" name="userId" required
+                       class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+
+            <!-- Vehicle ID -->
+            <div>
+                <label for="model" class="block text-sm font-medium text-gray-700">Vehicle ID</label>
+                <input type="text" id="model" name="model" required
+                       class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+
+            <div>
+              <label for="Report-Date" class="block text-sm font-medium text-gray-700">Report Date</label>
+              <input type="date" id="Report-Date" name="Report-Date" class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+            </div>
+
+            <!-- Damage Description Textarea -->
+            <div>
+                <label for="description" class="block text-sm font-medium text-gray-700">Damage Description</label>
+                <textarea id="description" name="description" rows="4" required
+                          class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit"
+                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300">
+                    Submit Report
+                </button>
+            </div>
+        </form>
+
+        <!-- Back to Home Link -->
+        <div class="text-center mt-6">
+            <a href="Main Page.html" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">
+          <span aria-hidden="true">&larr;</span> Back to Home
+        </a>
+        </div>
+    </div>
+</body>
+</html>

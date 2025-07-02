@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Your Vehicle - RentX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <div class="container mx-auto max-w-4xl my-10 px-4">
+    <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Booking Details</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Vehicle Details -->
+        <div id="vehicle-details" class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4" id="vehicle-name">Vehicle Name</h3>
+          <img id="vehicle-image" src="" alt="Selected Vehicle" class="w-full h-auto rounded-lg object-cover mb-4">
+          <p class="text-gray-600 mb-4" id="vehicle-type">Type: </p>
+          <div class="text-gray-800 space-y-1">
+            <p><span class="font-semibold">Daily Rate:</span> LKR <span id="daily-rate">0</span></p>
+            <p><span class="font-semibold">Weekly Rate:</span> LKR <span id="weekly-rate">0</span></p>
+            <p><span class="font-semibold">Monthly Rate:</span> LKR <span id="monthly-rate">0</span></p>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div id="booking-form-container">
+          <form method="POST" action="booking.php">
+          <!-- Pass vehicle_id via hidden field -->
+              <input type="hidden" name="vehicle_id" value="3"> <!-- Replace with actual ID -->
+              <input type="hidden" name="subscription_id" value="">
+              <input type="hidden" name="user_id" value="1">
+
+                <!-- Name -->
+                <div>
+                  <label class="block text-sm font-medium text-gray-700">User ID</label>
+                  <input type="text" name="User ID" required class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+
+                <!-- Name -->
+                <div>
+                  <label class="block text-sm font-medium text-gray-700">Vehicle ID</label>
+                  <input type="text" name="Vehicle ID" required class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <!-- Name -->
+                <div>
+                  <label class="block text-sm font-medium text-gray-700">Full Name</label>
+                  <input type="text" name="name" required class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label class="block text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" name="email" required class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+
+                <!-- Phone -->
+                <div>
+                  <label class="block text-sm font-medium text-gray-700">Phone</label>
+                  <input type="text" name="phone" required class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+
+                <!-- Pickup Date -->
+                <div>
+                  <label class="block text-sm font-medium text-gray-700">Pickup Date</label>
+                  <input type="date" name="pickup-date" required class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+
+                <!-- Return Date -->
+                <div>
+                  <label class="block text-sm font-medium text-gray-700">Return Date</label>
+                  <input type="date" name="return-date" required class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+
+              <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition-colors duration-300 mt-4">
+              Confirm Booking
+              </button>
+  </form>
+        </div>
+      </div>
+
+      <!-- Back Link -->
+      <div class="text-center mt-8">
+        <a href="vehicles.html" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">
+          ← Choose a Different Vehicle
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script to populate data -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+
+      // Set values from URL
+      const vehicleName = params.get("name");
+      const vehicleImage = params.get("image");
+      const vehicleType = params.get("type");
+      const dailyRate = params.get("dailyRate");
+      const weeklyRate = params.get("weeklyRate");
+      const monthlyRate = params.get("monthlyRate");
+      const vehicleId = params.get("vehicleId");
+      const subscriptionId = params.get("subscriptionId");
+
+      if (vehicleName) {
+        document.getElementById("vehicle-name").textContent = vehicleName;
+        document.getElementById("vehicle-image").src = vehicleImage;
+        document.getElementById("vehicle-type").textContent = "Type: " + vehicleType;
+        document.getElementById("daily-rate").textContent = parseInt(dailyRate).toLocaleString();
+        document.getElementById("weekly-rate").textContent = parseInt(weeklyRate).toLocaleString();
+        document.getElementById("monthly-rate").textContent = parseInt(monthlyRate).toLocaleString();
+
+        document.getElementById("vehicle_id").value = vehicleId;
+        document.getElementById("subscription_id").value = subscriptionId || "";
+      }
+
+      // Set minimum date to today
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById("pickup-date").min = today;
+      document.getElementById("return-date").min = today;
+    });
+  </script>
+</body>
+</html>

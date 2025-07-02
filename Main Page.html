@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentXpress - Your Journey Starts Here</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .video-background-container {
+            position: relative;
+            height: 85vh;
+            overflow: hidden;
+            border-radius: 0 0 2rem 2rem;
+        }
+        #background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -50;
+        }
+        /* Style for date picker icon */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            filter: invert(0.6) brightness(1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="absolute top-0 left-0 right-0 z-10 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-white">Rent<span class="text-blue-400">X</span>press</h1>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#features" class="text-white hover:text-blue-300 transition-colors">Features</a>
+                <a href="Vehicles.html" class="text-white hover:text-blue-300 transition-colors">Vehicles</a>
+                <a href="report.html" class="text-white hover:text-blue-300 transition-colors">Report Damage</a>
+                <a href="#about" class="text-white hover:text-blue-300 transition-colors">About</a>
+                <a href="create.html" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Sign Up</a>
+                <a href="Login.html" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Login</a>
+            </nav>
+            <button class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video Background -->
+    <div class="video-background-container">
+        <video autoplay muted loop playsinline id="background-video">
+            <source src="RentXpress_Commercial_Concept_Ready.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+        <div class="relative z-1 flex flex-col items-center justify-center h-full text-white text-center px-4">
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Your Journey Starts Here</h2>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">Discover the freedom of the open road with our premium fleet of rental vehicles. Perfect for your next adventure, business trip, or weekend getaway in Sri Lanka.</p>
+            
+            <!-- Booking Form -->
+            <form action="Vehicles.html" method="GET" class="w-full max-w-4xl bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 items-end">
+                    <div class="flex flex-col text-left">
+                        <label for="location" class="font-semibold mb-1 text-gray-100">Pick-up Location</label>
+                        <select id="location" name="location" class="p-3 rounded-lg bg-white/80 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>Colombo</option>
+                            <option>Galle</option>
+                            <option>Kandy</option>
+                            <option>Bandaranaike Int'l Airport</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col text-left">
+                        <label for="pickup-date" class="font-semibold mb-1 text-gray-100">Pick-up Date</label>
+                        <input type="date" id="pickup-date" name="pickup-date" class="p-3 rounded-lg bg-white/80 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500" value="2025-06-22">
+                    </div>
+                     <div class="flex flex-col text-left">
+                        <label for="return-date" class="font-semibold mb-1 text-gray-100">Return Date</label>
+                        <input type="date" id="return-date" name="return-date" class="p-3 rounded-lg bg-white/80 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500" value="2025-06-29">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-lg">
+                        <i class="fas fa-search mr-2"></i>Find Vehicle
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-16">
+
+        <!-- How It Works Section -->
+        <section id="features" class="text-center mb-20">
+            <h3 class="text-3xl font-bold mb-2 text-gray-900">Rent a Car in 3 Easy Steps</h3>
+            <p class="text-gray-600 mb-12 max-w-2xl mx-auto">We've simplified the rental process to get you on the road faster.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="p-6">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-search fa-3x"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Search & Select</h4>
+                    <p class="text-gray-600">Browse our diverse fleet and choose the perfect vehicle for your needs.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="p-6">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-calendar-check fa-3x"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Book & Confirm</h4>
+                    <p class="text-gray-600">Select your dates, add any extras, and confirm your booking online in minutes.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="p-6">
+                     <div class="text-blue-600 mb-4">
+                        <i class="fas fa-car-side fa-3x"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Pick-up & Drive</h4>
+                    <p class="text-gray-600">Pick up your sanitized, ready-to-go vehicle and start your journey.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-white rounded-xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h3 class="text-3xl font-bold mb-4 text-gray-900">Your Trusted Partner on the Road</h3>
+                <p class="text-gray-600 mb-4">RentXpress is a premier vehicle rental service based in Sri Lanka, dedicated to providing reliable, affordable, and high-quality transportation solutions. Our mission is to make your travel experience seamless and memorable.</p>
+                <p class="text-gray-600 mb-6">With a wide range of vehicles, from economical city cars to spacious family vans, we cater to all your travel needs. We pride ourselves on our exceptional customer service and well-maintained fleet.</p>
+                <a href="Vehicles.html" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">Explore Our Fleet</a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="IMG_7515.JPG" alt="Scenic road in Sri Lanka" class="rounded-lg shadow-md w-full h-auto object-cover">
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Rent<span class="text-blue-400">X</span>press</h4>
+                    <p class="text-gray-400">Providing the best car rental experience in Sri Lanka.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">Quick Links</h5>
+                    <ul>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="Vehicles.html" class="text-gray-400 hover:text-white">Vehicles</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">Contact</h5>
+                    <p class="text-gray-400">Colombo, Sri Lanka</p>
+                    <p class="text-gray-400">contact@rentxpress.lk</p>
+                    <p class="text-gray-400">+94 11 234 5678</p>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 border-t border-gray-700 mt-8 pt-6">
+                &copy; 2025 RentXpress. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
